@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const mongoUrl =     process.env.MONGO_URL
 
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://teamaedb:teamaedbrepo1212@cluster0.n0txi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
         console.log("Successfully connected to mongodb")
     })

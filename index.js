@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('./config/db');
 const blogRouter = require('./routes/blogRoute');
-const blogTwoRouter = require('./routes/blogTwoRoute');
+
 const Admin = require("./model/adminModel")
 const cors = require('cors');
 
@@ -45,7 +45,7 @@ const insertAdmin = async () => {
 
 
 
-app.use('/apiTwo',blogTwoRouter);
+
 app.use('/api',blogRouter);
 
 
