@@ -8,7 +8,8 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("Successfully connected to mongodb")
     })
     .catch((error) => {
-        console.log("Something happened while connecting to mdb")
+        console.log("Something happened while connecting to mdb",error)
     })
+
 
 module.exports = mongoose;

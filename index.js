@@ -19,17 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
 const PORT = process.env.PORT;  
-
-
 const insertAdmin = async () => {
   const sampleAdmin = {
     userName: "TeamAe",
     email: "teamaedb@gmail.com",
     password: "admin@13",
   };
-
-  
-
   try {
     const existingAdmin = await Admin.findOne({ email: sampleAdmin.email });
     if (!existingAdmin) {
@@ -43,7 +38,7 @@ const insertAdmin = async () => {
     console.error("Failed to insert sample admin:", error);
   }
 };
-  insertAdmin()
+  // insertAdmin()
 
 
 
